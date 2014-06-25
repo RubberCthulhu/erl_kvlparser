@@ -1,0 +1,8 @@
+{application, kvlparser,
+ [
+  {description, "Parser for lists containing key-value pairs (tuples {key, value})"},
+  {vsn, "1.0"},
+  {modules, [kvlparser]},
+  {registered, []},
+  {applications, [kernel, stdlib]}
+ ]}.
