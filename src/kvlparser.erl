@@ -148,10 +148,10 @@ parse_value1(#kvlparser_item_spec{parse = Parse} = Spec, Value) ->
 	    Error
     end.
 
-parse_value2(#kvlparser_item_spec{key = Key, value = any}, Value) ->
-    {ok, {Key, Value}};
-parse_value2(#kvlparser_item_spec{key = Key, value = Value}, Value) ->
-    {ok, {Key, Value}};
+parse_value2(#kvlparser_item_spec{alias = Alias, value = any}, Value) ->
+    {ok, {Alias, Value}};
+parse_value2(#kvlparser_item_spec{alias = Alias, value = Value}, Value) ->
+    {ok, {Alias, Value}};
 parse_value2(_, _) ->
     {error, not_satisfied_value}.
 
